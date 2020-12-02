@@ -10,9 +10,7 @@ public class Fraction {
 	/*
 	 * 	The constructor takes a two int parameter which will
 	 * be assigned into as a numerator or the denominator
-	 *	The Constructor will check if the numerator is 0 and if
-	 *so will set both numerator and denominator to 0	
-	 * The constructor will check if both value are negative 
+	 * 	The constructor will check if both value are negative 
 	 * and if so will negate the negation make the fraction
 	 * positive.
 	 * 	The constructor will also check if the numerator is 
@@ -26,10 +24,7 @@ public class Fraction {
 	 *variant
 	 */
 	public Fraction(int numerator,int denominator) {
-		if(numerator==0) {
-			this.numerator=numerator;
-			this.denominator=numerator;
-		}else if((numerator<0)&&(denominator<0)) {
+		if((numerator<0)&&(denominator<0)) {
 			this.numerator=0-numerator;
 			this.denominator=0-denominator;
 		}else if((denominator<0)&&(numerator>0)){
@@ -105,13 +100,41 @@ public class Fraction {
 	public int compareTo(Fraction test) {
 		return 0;
 	}
-	
+	/*
+	 * The add method takes a fraction parameter and checks
+	 * if the numerator is 0. If so the method returns a new
+	 * fraction composed of the this.numerator and 
+	 * this.denominator.
+	 * Otherwise the method creates int variables num and den
+	 * to hold the new numerator and denominator values.
+	 * the num get this.numerator*test.denominator +
+	 * this.denominator*test.numerator while the den gets
+	 * this.denominator*test.denominator.
+	 * The method returns new Fraction(num,den)
+	 */
 	public Fraction add(Fraction test){
-		return null;
+		if(test.getNum()==0) {
+			Fraction result=new Fraction(this.numerator,this.denominator);
+			return result;
+		}
+		int num,den;
+		num=(this.getNum()*test.getDen())+(this.getDen()*test.getNum());
+		den=this.getDen()*test.getDen();
+		return new Fraction(num,den);
 	}
-	
+	/*
+	 * The multiply method multiply the this fraction and
+	 * the test fraction passed in. The method initalizes
+	 * int variable num and den. num gets this.numerator*
+	 * test.numerator and the den variable gets 
+	 * this.denominator*test.denominator.
+	 * the method returns new Fraction(num,den);
+	 */
 	public Fraction multiply(Fraction test) {
-		return null;
+		int num,den;
+		num=this.getNum()*test.getNum();
+		den=this.getDen()*test.getDen();
+		return new Fraction(num,den);
 	}
 	
 	public String toString() {

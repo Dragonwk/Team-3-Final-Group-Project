@@ -60,7 +60,7 @@ class FractionTest {
 		assertEquals(5, test.getDen());
 		test=test.add(new Fraction(0,5));
 		assertEquals(8, test.getNum());
-		assertEquals(5, test.getNum());
+		assertEquals(5, test.getDen());
 	}
 	@Test
 	public void testMultiplication() {
