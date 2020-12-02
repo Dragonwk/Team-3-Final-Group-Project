@@ -82,11 +82,26 @@ public class Fraction {
 	public int getDen() {
 		return this.denominator;
 	}
-	
+	/*
+	 * equals method checks if a passed in fraction is equal
+	 * to the this. Fraction. The method checks if 
+	 * this.getNum()==test.getNum()&&this.getDen()==test.getDen().
+	 * This checks if the this fraction's numerator equals the 
+	 * test numerator as well as the this fraction's denominator
+	 * is tested against test denominator. If both numerator and
+	 * denominator is equal then the method returns true 
+	 * otherwise the method returns false.
+	 */
 	public boolean equals(Fraction test) {
-		return false;
+		if(this.getNum()==test.getNum()&&this.getDen()==test.getDen()) {
+			return true;
+		}else {
+		return false;	
+		}
 	}
-	
+	/*
+	 * compareTo compares this fraction and test.
+	 */
 	public int compareTo(Fraction test) {
 		return 0;
 	}
