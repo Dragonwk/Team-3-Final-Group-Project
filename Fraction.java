@@ -21,6 +21,9 @@ public class Fraction {
 	 * denominator into a positive.
 	 * 	Else the constructor will assign the numerator as
 	 * this.numerator and similarly with the denominator
+	 *	Then the constructor will call the reduction method
+	 *which will reduce the fraction to the smallest 
+	 *variant
 	 */
 	public Fraction(int numerator,int denominator) {
 		if(numerator==0) {
@@ -38,7 +41,16 @@ public class Fraction {
 		}
 		reduction(this.numerator,this.denominator);
 	}
-	
+	/*
+	 * the reduction method takes the parameter numerator and 
+	 * denominator which is then passed to the GreatestCommonDivisor
+	 * method which is used to find the greatest common
+	 * divisor. if the numerator is negative, then
+	 * the GreatestCommonDivisor takes the positive version
+	 * of the numerator. The GreatestCommonDivisor then returns a 
+	 * int value to the variable gcd. Then it set this.numerator
+	 * with numerator/gcd and similarly with the denominator
+	 */
 	public void reduction(int numerator,int denominator) {
 		int gcd;
 		if(numerator<0) {
@@ -49,13 +61,17 @@ public class Fraction {
 		this.numerator=numerator/gcd;
 		this.denominator=denominator/gcd;
 	}
-	
+	/*
+	 * The GreatestCommonDivisor take the numerator set to 
+	 * a and denominator set to b which is used to 
+	 * calculate the greatest common divisor and returns
+	 * a greatest common divisor as a int value
+	 */
 	public int GreatestCommonDivisor(int a,int b) {
 		if(b==0)
 			return a;
 		return GreatestCommonDivisor(b,a%b);
 	}
-	
 	/*
 	 * the getNum() method will return the this.numerator
 	 */
