@@ -40,7 +40,12 @@ public class Fraction {
 	}
 	
 	public void reduction(int numerator,int denominator) {
-		int gcd=GreatestCommonDivisor(this.numerator,this.denominator);
+		int gcd;
+		if(numerator<0) {
+			gcd=GreatestCommonDivisor(0-numerator,denominator);
+		}else {
+			gcd=GreatestCommonDivisor(numerator,denominator);
+		}
 		this.numerator=numerator/gcd;
 		this.denominator=denominator/gcd;
 	}

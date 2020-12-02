@@ -12,7 +12,7 @@ class FractionTest {
 	@BeforeEach
 	public void setup() throws Exception{
 		//initial fraction
-		test=new Fraction(-16,-28);
+		test=new Fraction(-16,-20);
 	}
 	@Test
 	public void testNumAndDen() {
@@ -21,10 +21,10 @@ class FractionTest {
 		Fraction f3= new Fraction(-4,-5);
 		assertEquals(4, f1.getNum());
 		assertEquals(-1, f2.getNum());
-		assertEquals(5, f1.getNum());
-		assertEquals(2, f2.getNum());
+		assertEquals(5, f1.getDen());
+		assertEquals(2, f2.getDen());
 		assertEquals(4, f3.getNum());
-		assertEquals(5, f3.getNum());
+		assertEquals(5, f3.getDen());
 	}
 	@Test
 	public void testNegatives() {
