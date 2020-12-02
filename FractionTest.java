@@ -44,7 +44,7 @@ class FractionTest {
 	}
 	@Test
 	public void testEquals() {
-		assertFalse(test.equals(new Fraction(31,50)));
+		assertFalse(test.equals(new Fraction(41,50)));
 		assertTrue(test.equals(new Fraction(4000,5000)));
 	}
 	@Test
