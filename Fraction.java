@@ -96,9 +96,36 @@ public class Fraction {
 	}
 	/*
 	 * compareTo compares this fraction and test.
+	 * the compareTo checks to see which of the two decimal values are greatest
+	 * if this is greater return 2
+	 * if test is greater return -1
+	 * if they are the same return 0
 	 */
 	public int compareTo(Fraction test) {
-		return 0;
+		
+		//preconditions
+		if(test == null)
+			throw new IllegalArgumentException("Error: test cannot be null");
+		
+		//create decimal values for the two fractions
+		double thisDecimal = (double)this.getNum() / (double)this.getDen();
+		double testDecimal = (double)test.getNum() / (double)test.getDen();
+		
+		//if this is greater return 2
+		if(thisDecimal > testDecimal) 
+		{
+			return 2;
+		}
+		//if test is greater return -1
+		else if(thisDecimal < testDecimal)
+		{
+			return -1;
+		}
+		//if they are the same return 0
+		else 
+		{
+			return 0;
+		}
 	}
 	/*
 	 * The add method takes a fraction parameter and checks
@@ -137,12 +164,23 @@ public class Fraction {
 		return new Fraction(num,den);
 	}
 	
+	/*
+	 *toString creates a simple string that includes the numerator and denominator with / in the middle
+	 */
 	public String toString() {
-		return null;
+		//returns the numerator and denominator with / in the middle
+		return this.getNum() + "/" + this.getDen();
 	}
 	
+	/*
+	 *realValue returns the result of the division as a decimal number
+	 *it casts both numbers as a double then divides them
+	 */
 	public double realValue() {
-		return 0;
+		//casts both numbers as a double then divides them
+		double thisDecimal = (double)this.getNum() / (double)this.getDen();
+		//return the number
+		return thisDecimal;
 	}
 	
 }
