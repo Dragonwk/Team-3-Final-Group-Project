@@ -24,6 +24,8 @@ public class Fraction {
 	 *variant
 	 */
 	public Fraction(int numerator,int denominator) {
+		if(denominator = 0)
+			throw new IllegalArgumentException("The denominator with the value of 0 is not permitted");
 		if((numerator<0)&&(denominator<0)) {
 			this.numerator=0-numerator;
 			this.denominator=0-denominator;
@@ -140,6 +142,8 @@ public class Fraction {
 	 * The method returns new Fraction(num,den)
 	 */
 	public Fraction add(Fraction test){
+		if(test == null)
+			throw new IllegalArgumentException("Cannot perform math operations on a null fraction object!");
 		if(test.getNum()==0) {
 			Fraction result=new Fraction(this.numerator,this.denominator);
 			return result;
@@ -158,6 +162,8 @@ public class Fraction {
 	 * the method returns new Fraction(num,den);
 	 */
 	public Fraction multiply(Fraction test) {
+		if(test == null)
+		throw new IllegalArgumentException("Cannot perform math operations on a null fraction object!");
 		int num,den;
 		num=this.getNum()*test.getNum();
 		den=this.getDen()*test.getDen();
