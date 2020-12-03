@@ -24,7 +24,7 @@ public class Fraction {
 	 *variant
 	 */
 	public Fraction(int numerator,int denominator) {
-		if(denominator = 0)
+		if(denominator == 0)
 			throw new IllegalArgumentException("The denominator with the value of 0 is not permitted");
 		if((numerator<0)&&(denominator<0)) {
 			this.numerator=0-numerator;
