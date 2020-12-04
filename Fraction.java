@@ -1,5 +1,20 @@
 package fraction;
-
+/*
+ * Team 3
+ * Andrew Brown
+ * Allen Chang
+ * Firomsa Abdurahman
+ * 
+ * Description:
+ * This file constains the Fraction class which will be tested in 
+ * the FractionTest and IllegalArgument jUnit tests.
+ * This file contains the Fraction constructor and the methods:
+ * reductino,GreatestCommonDivisor,getNum,getDen,equals,compareTO,
+ * add,multiply,toString, and realValue. Each method, except 
+ * GreatestCommonDivisor will be tested.
+ * Furthermore descriptive description about each of the method 
+ * will be next to the method itself.
+ */
 public class Fraction {
 	/*
 	 * Fraction class that will get tested.

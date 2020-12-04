@@ -1,5 +1,17 @@
 package fraction;
-
+/*
+ * Team 3
+ * Andrew Brown
+ * Allen Chang
+ * Firomsa Abdurahman
+ * 
+ * Description:
+ * This is the IllegalArgument jUnit test. This file test for the Fraction
+ * constructor, add method, and the multiply method throwing the correct
+ * exception. These three should throw an IllegalArgumentException with the
+ * desired message that was provided for the assignment. Further more 
+ * descriptive description will be above each individual test.
+ */
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;

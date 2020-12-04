@@ -1,5 +1,17 @@
 package fraction;
-
+/*
+ * Team 3
+ * Andrew Brown
+ * Allen Chang
+ * Firomsa Abdurahman
+ * 
+ * Description:
+ * This is the FractionTest jUnit file. This file tests each of the 
+ * method in the Fraction class except the GreatestCommonDivisor.
+ * Each test checks the return value to see if each of the method in
+ * Fraction class is returning the correct value. Furthermore descriptive
+ * descriptions of each test will be next to the individual tests.
+ */
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
